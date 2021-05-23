@@ -1,8 +1,8 @@
 defmodule Meshx.MixProject do
   use Mix.Project
 
-  @version "0.1.0-dev"
   @source_url "https://github.com/andrzej-mag/meshx"
+  @version "0.1.0"
 
   def project do
     [
@@ -36,7 +36,12 @@ defmodule Meshx.MixProject do
       main: "readme",
       source_url: @source_url,
       source_ref: "v#{@version}",
-      extras: ["docs/README.md"]
+      extras: ["docs/README.md"],
+      deps: [
+        meshx_consul: "https://hexdocs.pm/meshx_consul",
+        meshx_node: "https://hexdocs.pm/meshx_node",
+        meshx_rpc: "https://hexdocs.pm/meshx_rpc"
+      ]
     ]
   end
 end
