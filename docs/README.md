@@ -6,6 +6,7 @@ Service mesh support for Elixir.
 ### MeshxConsul
 [![Hex Version](https://img.shields.io/hexpm/v/meshx_consul)](https://hex.pm/packages/meshx_consul)
 [![Hex Docs](https://img.shields.io/badge/hex-docs-lightgreen)](https://hexdocs.pm/meshx_consul)
+[![GitHub](https://img.shields.io/github/stars/andrzej-mag/meshx_consul?style=social)](https://github.com/andrzej-mag/meshx_consul)
 
 `MeshxConsul` is a service mesh adapter implementing `Meshx.ServiceMesh` behaviour using HashiCorp [Consul](https://www.consul.io/) as an external service mesh solution. Package manages mesh service and upstream endpoints, which are later consumed by user service providers and upstream clients.
 
@@ -24,6 +25,7 @@ Service mesh support for Elixir.
 ### MeshxRpc
 [![Hex Version](https://img.shields.io/hexpm/v/meshx_rpc)](https://hex.pm/packages/meshx_rpc)
 [![Hex Docs](https://img.shields.io/badge/hex-docs-lightgreen)](https://hexdocs.pm/meshx_rpc)
+[![GitHub](https://img.shields.io/github/stars/andrzej-mag/meshx_rpc?style=social)](https://github.com/andrzej-mag/meshx_rpc)
 
 `MeshxRpc` can be considered as alternative to Erlang OTP [`:erpc`](https://erlang.org/doc/man/erpc.html) (or [`:rpc`](https://erlang.org/doc/man/rpc.html)) module. `MeshxRpc` restricts request execution scope to single RPC server module to improve operational node security. `MeshxRpc` provides built-in features crucial for binary data transfers: chunking user data into smaller blocks to avoid IO socket blocking and transmission error detection with user configurable asynchronously executed block checksum functions.
 
@@ -36,6 +38,7 @@ Service mesh support for Elixir.
 ### MeshxNode
 [![Hex Version](https://img.shields.io/hexpm/v/meshx_node)](https://hex.pm/packages/meshx_node)
 [![Hex Docs](https://img.shields.io/badge/hex-docs-lightgreen)](https://hexdocs.pm/meshx_node)
+[![GitHub](https://img.shields.io/github/stars/andrzej-mag/meshx_node?style=social)](https://github.com/andrzej-mag/meshx_node)
 
 `MeshxNode` delivers Erlang style nodes connectivity by registering  special "node service" using service mesh adapter. Communication between nodes is realized using service mesh sidecar proxies and upstreams. Data traffic is secured with mTLS, managed by service mesh application control plane (e.g. Consul).
 
@@ -48,7 +51,13 @@ Users are free to use any mesh service management features provided by external 
 ### Meshx
 [![Hex Version](https://img.shields.io/hexpm/v/meshx)](https://hex.pm/packages/meshx)
 [![Hex Docs](https://img.shields.io/badge/hex-docs-lightgreen)](https://hexdocs.pm/meshx)
+[![GitHub](https://img.shields.io/github/stars/andrzej-mag/meshx?style=social)](https://github.com/andrzej-mag/meshx)
 
 `Meshx` package doesn't offer any end-user functionality. `Meshx` should be used by developers building new service mesh adapters implementing `Meshx.ServiceMesh` behavior.
 
 Service mesh adapter in practice should be reasonably thin layer between user application using `Meshx` packages and external software providing service mesh solution. Mesh adapter should use third party application API to implement functionality required by `Meshx.ServiceMesh` behavior. As described earlier `Meshx` is released with HashiCorp Consul adapter - `MeshxConsul`.
+
+### MeshxRpc Demo
+[![GitHub](https://img.shields.io/github/stars/andrzej-mag/meshx_rpc_demo?style=social)](https://github.com/andrzej-mag/meshx_rpc_demo)
+
+Basic `MeshxRpc` capabilities demonstration with Phoenix LiveView.
